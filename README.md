@@ -1,11 +1,21 @@
-# BY Blog
+# Yougth Blog
 
-> 下面是博客的搭建教程，这个教程修改自 [Hux](https://github.com/Huxpro/huxpro.github.io) 。
+> 下面是博客的搭建教程，这个教程修改自 [Qiubaiying](https://github.com/qiubaiying/qiubaiying.github.io) 。
 
-### [我的博客在这里 &rarr;](http://yougth.github.io)
+### [我的博客在这里 &rarr;](http://yougth.top)
 
-测试一个公式 $ a^2 + b^2 = c^2$
+装上基本上很好用，发现一个问题做了修复，基本上其他的都满足了我的要求
 
+ * Markdown不支持数学公式
+ 
+ 	这个也比较简单，看了下MarkDown引擎用的是默认kramdown，然后在_layouts/default.html最前面添加下面这个，意思就是用mathjax解析数学公式
+ 	
+ ```
+ <script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+ ```
+ 
 
 ## 使用
 
