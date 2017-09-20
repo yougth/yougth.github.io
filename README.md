@@ -2,7 +2,7 @@
 
 > 下面是博客的搭建教程，这个教程修改自 [Qiubaiying](https://github.com/qiubaiying/qiubaiying.github.io) 。
 
-### [我的博客在这里 &rarr;](http://yougth.top)
+### [我的博客在这里 &rarr;](http://yougth.top/)
 
 装上基本上很好用，发现一个问题做了修复，基本上其他的都满足了我的要求
 
