@@ -98,13 +98,16 @@ friends: [
         title: "csdn博客",
         href: "http://blog.csdn.net/y990041769?viewmode=list"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "知乎·yougth",
+        href: "https://www.zhihu.com/people/yougth/activities"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "阮一峰",
+        href: "http://www.ruanyifeng.com/blog/"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "CoolShell",
+        href: "https://coolshell.cn/"
+    },{
+        title: "美团技术",
+        href: "https://tech.meituan.com/"
     }
 ]
