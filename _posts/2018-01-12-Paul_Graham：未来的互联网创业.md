@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      Paul Graham：未来的互联网创业（上）
-subtitle:   未来的互联网创业（上）
+title:      Paul Graham：未来的互联网创业
+subtitle:   未来的互联网创业
 date:       2018-01-12
 author:     yougth
-header-img: img/post-bg-universe.jpg
+header-img: img/post-bg-re-vs-ng2.jpg
 catalog: true
 tags:
     - 互联网
@@ -142,7 +142,7 @@ Google的例子对整个有这种想法的世界，是一帖解药。Google有�
 
 One reason Google doesn't have a problem with acquisitions is that they know first-hand the quality of the people they can get that way. Larry and Sergey only started Google after making the rounds of the search engines trying to sell their idea and finding no takers. They've been the guys coming in to visit the big company, so they know who might be sitting across that conference table from them.
 
-Google没有对并购感到不好意思的一个原因是，他们很清楚地知道，通过这种方式，他们得到的人才的质量。**Google的创始人Larry和Sergey，之所以会创立Google，是因为他们向其他搜索引擎兜售他们的想法，结果都遭到拒绝。他们的这种拜访大公司的经历，使得他们知道坐在会议桌另一头的人，可能有着什么样的质量。******
+Google没有对并购感到不好意思的一个原因是，他们很清楚地知道，通过这种方式，他们得到的人才的质量。**Google的创始人Larry和Sergey，之所以会创立Google，是因为他们向其他搜索引擎兜售他们的想法，结果都遭到拒绝。他们的这种拜访大公司的经历，使得他们知道坐在会议桌另一头的人，可能有着什么样的质量。**
 
 # **Paul Graham：未来的互联网创业（下）******
 
