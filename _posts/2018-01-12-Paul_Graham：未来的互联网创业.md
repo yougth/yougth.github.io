@@ -144,7 +144,11 @@ One reason Google doesn't have a problem with acquisitions is that they know fir
 
 Google没有对并购感到不好意思的一个原因是，他们很清楚地知道，通过这种方式，他们得到的人才的质量。**Google的创始人Larry和Sergey，之所以会创立Google，是因为他们向其他搜索引擎兜售他们的想法，结果都遭到拒绝。他们的这种拜访大公司的经历，使得他们知道坐在会议桌另一头的人，可能有着什么样的质量。******
 
-** **
+# **Paul Graham：未来的互联网创业（下）******
+
+作者： [阮一峰](http://www.ruanyifeng.com/)
+
+日期： [2008年1月29日](http://www.ruanyifeng.com/blog/2008/01/)
 
 ![](file:///C:\Users\yougth\AppData\Local\Temp\ksohtml\wps7567.tmp.png)
 
