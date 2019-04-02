@@ -18,6 +18,7 @@ sidebar-avatar: /img/about-BY-yougth.jpg      # use absolute URL, seeing it's us
 
 # SNS settings
 RSS: false
+#RSS: true
 # weibo_username:     qiubaiying
 zhihu_username:     yougth
 github_username:    yougth
@@ -109,5 +110,17 @@ friends: [
     },{
         title: "美团技术",
         href: "https://tech.meituan.com/"
+    },{
+        title: "Semocean",
+        href: "http://www.semocean.com/"
+    },{
+        title: "统计之都",
+        href: "https://cosx.org/"
+    },{
+        title: "期望最大化",
+        href: "http://column.hongliangjie.com/"
+    },{
+        title: "小毛驴",
+        href: "https://yangxudong.github.io/"
     }
 ]
