@@ -12,7 +12,7 @@ github_repo: "https://github.com/yougth/yougthblog.github.io.git" # you code rep
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "程序猿,专注于推荐系统/机器学习，欢迎巨巨们交流"
-sidebar-avatar: /img/about-BY-yougth.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/about-BY-yougth-v2.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
