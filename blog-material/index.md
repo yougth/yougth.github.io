@@ -14,6 +14,13 @@ header-img: "img/post-bg-coffee.jpeg"
  - [机器学习在热门微博推荐中的应用](https://yq.aliyun.com/articles/448320?do=login&accounttraceid=ae790246-2e55-4ede-ae1c-11762f3d4adf&do=login)
  - [全能的fm模型](https://zhuanlan.zhihu.com/p/58160982?utm_source=wechat_session&utm_medium=social&utm_oi=26740000817152)
 
+### 推荐之召回
+ - [负样本为王：评Facebook的向量化召回算法](https://zhuanlan.zhihu.com/p/165064102)
+
+### 多目标优化
+ - [多目标排序模型在腾讯QQ看点推荐中的应用实践](https://zhuanlan.zhihu.com/p/359275468)
+ - [推荐系统之多目标优化小结](https://zhuanlan.zhihu.com/p/299913604)
+
 ### 机器学习文章
  - [机器学习在工业应用中的新思考](https://zhuanlan.zhihu.com/p/24505389)
 
@@ -25,6 +32,9 @@ header-img: "img/post-bg-coffee.jpeg"
  - LR从入门到精通[[PDF下载]](https://pan.baidu.com/s/1k7Una-mT9i03UZO67aW79A)
  - 支持向量机通俗导论[[PDF下载]](https://pan.baidu.com/s/1jDqIxWQlP9Fohs1IkleJ2g)
  - 大数据下的逻辑回归训练模型方法论[[PDF下载]](https://pan.baidu.com/s/11DR69aD9O3iyImF0DOU6fQ)
+
+### 优化方法
+ - [一个框架看懂优化算法之异同 SGD/AdaGrad/Adam](https://www.zhihu.com/column/juliuszh)
 
 ### 深度学习
  - 深度学习[[PDF下载]](https://pan.baidu.com/s/1CSVmPRfD2tFiIZrgidX6sw)
