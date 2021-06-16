@@ -4,6 +4,10 @@ title: "TIMELINE"
 description: "The sandflass remembers the time we lost."  ##I don't need sex \n Life fuck me everyday
 header-img: "img/post-bg-coffee.jpeg"
 ---
+### 2021-06-16
+入职新的公司，开启新的职业旅程，记住永远保持谦逊、理性。从技术深度和综合能力双向发展。
+
+---
 ### 2021-05-05
 一生中每个方向上有一个关键的人做目标就好了，比如像毛主席学习搞事业、像巴菲特学习理财、像芒格学习从历史中批判性学习。
 
