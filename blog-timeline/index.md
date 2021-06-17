@@ -4,6 +4,14 @@ title: "TIMELINE"
 description: "The sandflass remembers the time we lost."  ##I don't need sex \n Life fuck me everyday
 header-img: "img/post-bg-coffee.jpeg"
 ---
+### 2021-06-17
+交流的层次。
+第一层：被动输入，比如读书。
+第二层：双向互动，比如日常聊天、有输入有输出。
+第三层：双向刺激性互动，在和高你一两个层次的人交流最常见，总是一针见血、引发你的深度思考。
+尤其推荐第三层的交流，成长最快。第一种也需要读高层次人的书为最佳。
+
+---
 ### 2021-06-16
 入职新的公司，开启新的职业旅程，记住永远保持谦逊、理性。从技术深度和综合能力双向发展。
 
