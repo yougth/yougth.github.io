@@ -21,6 +21,9 @@ header-img: "img/post-bg-coffee.jpeg"
  - [多目标排序模型在腾讯QQ看点推荐中的应用实践](https://zhuanlan.zhihu.com/p/359275468)
  - [推荐系统之多目标优化小结](https://zhuanlan.zhihu.com/p/299913604)
 
+### 商品推荐
+ - [深度排序模型在淘宝直播的演进与应用](https://mp.weixin.qq.com/s/b0mHh-cTeY6LtZ88BlAleQ)
+
 ### 机器学习文章
  - [机器学习在工业应用中的新思考](https://zhuanlan.zhihu.com/p/24505389)
 
