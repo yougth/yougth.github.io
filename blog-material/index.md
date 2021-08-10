@@ -23,6 +23,7 @@ header-img: "img/post-bg-coffee.jpeg"
 
 ### 商品推荐
  - [深度排序模型在淘宝直播的演进与应用](https://mp.weixin.qq.com/s/b0mHh-cTeY6LtZ88BlAleQ)
+ - [阿里广告预估校准](https://mp.weixin.qq.com/s/9bqR14Qnbdy6kVB31gTjqw)
 
 ### 机器学习文章
  - [机器学习在工业应用中的新思考](https://zhuanlan.zhihu.com/p/24505389)
