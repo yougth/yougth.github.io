@@ -5,6 +5,10 @@ description: "The sandflass remembers the time we lost."  ##I don't need sex \n 
 header-img: "img/post-bg-coffee.jpeg"
 ---
 ***
+### 2021-11-22
+稳稳的幸福
+
+***
 ### 2021-08-17
 在重要的方向上，一定要形成自己的体系，以及随着按照体系执行的过程不断总结修正，比如股票、做人、技术、职场！
 
