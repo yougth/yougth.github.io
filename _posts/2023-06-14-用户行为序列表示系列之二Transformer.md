@@ -34,7 +34,7 @@ encode本身和原始一样，直接使用行为序列中item做self attention�
 
 1. Embedding	  Item Feature: Ei=Embedding(Item);
 2. self-Attention  $$Attention(Q, K, V)= softmax(QK^T/d^{1/2})V $$
-3. Multi-Head Attention $$ MultiHead(Q, K, V)=Concat(head1, head2, headh)W^H, where head=Attention(EW^E, EW^K, EW^V) $$
+3. Multi-Head Attention $$ MultiHead(Q, K, V)=Concat(head1, head2, headh)W^H $$,	$$ where  head=Attention(EW^E, EW^K, EW^V) $$
 4. Position-wise Feed-Forward Networks 	FFN(x) = max(0,xW1+b1)W2+b2, where x= MultiHead(Q, K, V)
 
 加入target item之后：
