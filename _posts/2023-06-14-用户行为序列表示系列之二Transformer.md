@@ -39,20 +39,18 @@ encode本身和原始一样，直接使用行为序列中item做self attention�
 
 加入target item之后：
 
-1. Embedding 	Item_Feature: Ei=Embedding(Item) E=Ei
-2. Target Attention	$$Interest = Attention(Q, K, V)= softmax(QK^T/d^{1/2})V 
- where K= EW^K, V=EW^V, E=Ei, Ei=FFN(x)(上一阶段行为序列建模输入)；  
- Q=EqW^Q 为target item的表示W矩阵$$
+1. Embedding Item_Feature: Ei=Embedding(Item) E=Ei
+2. Target Attention $$Interest = Attention(Q, K, V)= softmax(QK^T/d^{1/2})V$$	$$where K= EW^K, V=EW^V, E=Ei, Ei=FFN(x)(上一阶段行为序列建模输入)$$;	$$Q=EqW^Q 为target item的表示W矩阵$$
 
 ### 引入更多信息
 
-> Item Feature: Ei=Embedding(Item);
-> Time Feature: Et=Embedding(ceil(log2(T_{request}-T_{click}))), 其中T_{request}表示当前请求时间，而T_{click}表示用户点击时候时间。
-> Positional Feature: Ep=Embedding(Rank(Trequest-Tclick));
-> Dwell Time Feature: Ed=Embedding(ceil(log2T_{dwell})),T_{dwell}表示用户点击停留时长。
-> Click Source Feature: Es=Embedding(Click Source),Click Source 表示点击的来源，比如特定推荐位。
-> Click Count Feature: Ec=Embedding(Click Count),点击次数
-> E=Ei+Et+Ep+Ed+Es+Ec
+1. Item Feature: Ei=Embedding(Item);
+2. Time Feature: Et=Embedding(ceil(log2(T_{request}-T_{click}))), 其中T_{request}表示当前请求时间，而T_{click}表示用户点击时候时间。
+3. Positional Feature: Ep=Embedding(Rank(Trequest-Tclick));
+4. Dwell Time Feature: Ed=Embedding(ceil(log2T_{dwell})),T_{dwell}表示用户点击停留时长。
+5. Click Source Feature: Es=Embedding(Click Source),Click Source 表示点击的来源，比如特定推荐位。
+6. Click Count Feature: Ec=Embedding(Click Count),点击次数
+7. E=Ei+Et+Ep+Ed+Es+Ec
 
 序列长度为150，直接引入以上信息作为对行为序列中item的补充信息建模，在引入target items之后固定时候feture emb固定表示即可，
 
