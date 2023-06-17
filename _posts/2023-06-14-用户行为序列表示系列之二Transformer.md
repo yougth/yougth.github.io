@@ -32,113 +32,32 @@ encode本身和原始一样，直接使用行为序列中item做self attention�
 
 行为序列建模表示为
 
- > A. Embedding	  Item Feature: Ei=Embedding(Item);
-
- > B. self-Attention  $$Attention(Q, K, V)= softmax(QK^T/d^{1/2})V $$
-
- > C. Multi-Head Attention $$ MultiHead(Q, K, V)=Concat(head1, head2, headh)W^H, where head=Attention(EW^E, EW^K, EW^V) $$
-
- > D. Position-wise Feed-Forward Networks 	FFN(x) = max(0,xW1+b1)W2+b2, where x= MultiHead(Q, K, V)
+> A. Embedding	  Item Feature: Ei=Embedding(Item);
+> B. self-Attention  $$Attention(Q, K, V)= softmax(QK^T/d^{1/2})V $$
+> C. Multi-Head Attention $$ MultiHead(Q, K, V)=Concat(head1, head2, headh)W^H, where head=Attention(EW^E, EW^K, EW^V) $$
+> D. Position-wise Feed-Forward Networks 	FFN(x) = max(0,xW1+b1)W2+b2, where x= MultiHead(Q, K, V)
 
 加入target item之后：
 
  > A. Embedding 	Item_Feature: Ei=Embedding(Item) E=Ei
-
- > B. Target Attention	$$Interest = Attention(Q, K, V)= softmax(QK^T/d^{1/2})V 
-
- > where K= EW^K, V=EW^V, E=Ei, Ei=FFN(x)(上一阶段行为序列建模输入)；  
-
- > Q=EqW^Q 为target item的表示W矩阵$$
+ B. Target Attention	$$Interest = Attention(Q, K, V)= softmax(QK^T/d^{1/2})V 
+ where K= EW^K, V=EW^V, E=Ei, Ei=FFN(x)(上一阶段行为序列建模输入)；  
+ Q=EqW^Q 为target item的表示W矩阵$$
 
 ### 引入更多信息
 
 > Item Feature: Ei=Embedding(Item);
-
 > Time Feature: Et=Embedding(ceil(log2(T_{request}-T_{click}))), 其中T_{request}表示当前请求时间，而T_{click}表示用户点击时候时间。
-
 > Positional Feature: Ep=Embedding(Rank(Trequest-Tclick));
-
 > Dwell Time Feature: Ed=Embedding(ceil(log2T_{dwell})),T_{dwell}表示用户点击停留时长。
-
 > Click Source Feature: Es=Embedding(Click Source),Click Source 表示点击的来源，比如特定推荐位。
-
 > Click Count Feature: Ec=Embedding(Click Count),点击次数
-
 > E=Ei+Et+Ep+Ed+Es+Ec
 
 序列长度为150，直接引入以上信息作为对行为序列中item的补充信息建模，在引入target items之后固定时候feture emb固定表示即可，
 
 ### 实现
 
-```python
-class Attention(Module):
-
-    def __init__(self, name, hidden_size, hidden_size_inner, \
-            num_heads, attention_dropout):
-        super(Attention, self).__init__(name)
-        self.hidden_size = hidden_size
-        self.hidden_size_inner = hidden_size_inner
-        self.num_heads = num_heads
-        self.attention_dropout = attention_dropout
-
-        with self.name_scope:
-            self.q_dense_layer = tf.keras.layers.Dense(
-                hidden_size_inner, use_bias=False, name="q")
-
-            self.k_dense_layer = tf.keras.layers.Dense(
-                hidden_size_inner, use_bias=False, name="k")
-
-            self.v_dense_layer = tf.keras.layers.Dense(
-                hidden_size_inner, use_bias=False, name="v")
-
-            self.depth = (self.hidden_size_inner // self.num_heads)
-            self.output_dense_layer = tf.keras.layers.Dense(
-                hidden_size, use_bias=False, name="output_transform")
-
-    def split_heads(self, x):
-        with tf.name_scope("split_heads"):
-            batch_size = tf.shape(x)[0]
-            length = tf.shape(x)[1]
-            x = tf.reshape(x, [batch_size, length, self.num_heads, self.depth])
-        return tf.transpose(x, [0, 2, 1, 3])
-
-    def combine_heads(self, x):
-        with tf.name_scope("combine_heads"):
-            batch_size = tf.shape(x)[0]
-            length = tf.shape(x)[2]
-            x = tf.transpose(x, [0, 2, 1, 3])
-        return tf.reshape(x, [batch_size, length, self.hidden_size_inner])
-
-    @Module.with_name_scope
-    def __call__(self, x, y, bias, cache=None):
-        q = self.q_dense_layer(x)
-        k = self.k_dense_layer(y)
-        v = self.v_dense_layer(y)
-        if cache is not None:
-            # Combine cached keys and values with new keys and values.
-            k = tf.concat([cache["k"], k], axis=1)
-
-            # Update cache
-            cache["k"] = k
-            cache["v"] = v
-
-        q = self.split_heads(q)   # (batch, num_heads, len_x, hidden_size/num_heads)
-        k = self.split_heads(k)
-        v = self.split_heads(v)
-
-        q *= self.depth ** -0.5
-
-        logits = tf.matmul(q, k, transpose_b = True)
-        logits += bias # attention bias and position bias
-        weights = tf.nn.softmax(logits, name="attention_weights")
-#        if self.train:
-#        weights = tf.nn.dropout(weights, 1.0 - self.attention_dropout)
-        attention_output = tf.matmul(weights, v)
-
-        attention_output = self.combine_heads(attention_output)
-        attention_output = self.output_dense_layer(attention_output)
-        return attention_output
-```
 
 ```python
 class Attention(Module):
@@ -563,5 +482,5 @@ class Transformer(Module):
 1. 本身设计很灵活，可以各种灵活套用
 2. 建模序列长度很友好，因为每个节点都把序列上的其他节点看做无差的做attention，所以不存在长度边长后信息消失，比如我们使用150长度的序列建模
 3. 并行能力强，引入矩阵运算，计算快且并行能力强
-4. 模型表示能力强大，q可以理解全要查询的query（苹果手机），k理解为查询分解出来的key(apple品牌（k-v 100%）, 苹果水果（k-v 0%）)，而v则是世纪查询出来的结果value(iphone)
+4. 模型表示能力强大，q可以理解全要查询的query（苹果手机），k理解为查询分解出来的key(apple品牌（k-v 100%）, 苹果水果（k-v 0%）)，而v则是实际查询出来的结果value(iphone)
 
