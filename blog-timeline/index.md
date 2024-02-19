@@ -5,6 +5,10 @@ description: "The sandflass remembers the time we lost."  ##I don't need sex \n 
 header-img: "img/post-bg-coffee.jpeg"
 ---
 ***
+### 2024-02-19
+悲观者往往正确，但只有乐观者才能成功。
+
+***
 ### 2023-12-27
 [人性]人性的本质里面，无法忍受长期的安静，贪图于短期的快乐。  
 越是底层的人，越是无法克服这些，这就产生了大量的廉价的时间，而容易的赚钱模式就藏在这里面。  
