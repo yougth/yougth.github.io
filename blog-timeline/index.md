@@ -5,6 +5,15 @@ description: "The sandflass remembers the time we lost."  ##I don't need sex \n 
 header-img: "img/post-bg-coffee.jpeg"
 ---
 ***
+### 2024-04-08
+个体活着就要对抗墒增，对外肉体做墒减，对内思想做墒减，不断的提升认知。
+群体（小团队，公司、公司）也是需要不断对抗墒增。
+墒增的两个条件：封闭系统+无外力做工。对抗墒增需要开放系统+引入外力。
+![entropy_persion](http://yougth.top/img/timeline/entropy_persion.jpeg
+![entropy_group](http://yougth.top/img/timeline/entropy_group.png
+
+
+***
 ### 2024-02-19
 悲观者往往正确，但只有乐观者才能成功。
 
