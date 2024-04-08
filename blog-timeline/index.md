@@ -10,7 +10,8 @@ header-img: "img/post-bg-coffee.jpeg"
 群体（小团队，公司、公司）也是需要不断对抗墒增。
 墒增的两个条件：封闭系统+无外力做工。对抗墒增需要开放系统+引入外力。
 
-<img src=http://yougth.top/img/timeline/entropy_persion.jpeg width=100% />
+<img src=http://yougth.top/img/timeline/entropy_persion.jpeg style="zoom:50%;" />
+
 ![entropy_persion](http://yougth.top/img/timeline/entropy_persion.jpeg =100x100)
 
 ![entropy_group](http://yougth.top/img/timeline/entropy_group.png)
