@@ -235,3 +235,22 @@
     });
 </script>
 {% endif %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/17.8.3/lazyload.min.js"></script>
+<script>
+    // 拦截 Markdown 解析生成的 img 标签，将其改造为懒加载支持的格式
+    var images = document.querySelectorAll('.post-container img');
+    images.forEach(function(img) {
+        if (!img.classList.contains('no-lazy')) {
+            var src = img.getAttribute('src');
+            img.setAttribute('data-src', src);
+            // 默认放一张透明占位图
+            img.setAttribute('src', 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+            img.classList.add('lazy');
+        }
+    });
+    // 启动懒加载引擎
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy",
+        threshold: 300 // 提前 300px 开始加载图片，保证滑动平滑
+    });
+</script>
