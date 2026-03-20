@@ -12,7 +12,7 @@ tags:
     - Exploit
 ---
 
-之前讲了[推荐系统重的EE算法](http://yougth.top/2018/12/25/ExploitationAndExploration/)，讲了一些基础的Bandits冷启动算法，参加Recsys发现论文中和工业界讲的占比最高的是MAB问题。这里接着上面在深入一下。
+之前讲了[推荐系统重的EE算法](http://yougth.github.io/2018/12/25/ExploitationAndExploration/)，讲了一些基础的Bandits冷启动算法，参加Recsys发现论文中和工业界讲的占比最高的是MAB问题。这里接着上面在深入一下。
 
 ### LinUCB
 
@@ -61,7 +61,7 @@ $$
 
 这样
 
-![算法流程](http://yougth.top/img/linUCB/linUCB.jpg)
+![算法流程](http://yougth.github.io/img/linUCB/linUCB.jpg)
 
 首先第0行初始化，设置一个探索超参数 $$\alpha$$
 
