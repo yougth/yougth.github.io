@@ -1036,17 +1036,84 @@ img::-moz-selection {
 /*
  * Yougth Blog V2 - Magazine Card Style
  */
+
+/* ===== Warm gray background everywhere ===== */
 body {
   background: #f5f5f4 !important;
 }
 
+/* ===== Page layout: shrink the big hero header ===== */
+/* Applies to homepage, timeline, about, etc */
+.intro-header .site-heading,
+.intro-header .page-heading {
+  padding: 60px 0 40px !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading,
+  .intro-header .page-heading {
+    padding: 80px 0 50px !important;
+  }
+}
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+  font-size: 32px !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 42px !important;
+  }
+}
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+  font-size: 15px !important;
+  color: rgba(255,255,255,0.7) !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading .subheading,
+  .intro-header .page-heading .subheading {
+    font-size: 18px !important;
+  }
+}
+
+/* ===== Article post header smaller ===== */
+.intro-header .post-heading {
+  padding: 80px 0 40px !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .post-heading {
+    padding: 100px 0 50px !important;
+  }
+}
+.intro-header .post-heading h1 {
+  font-size: 30px !important;
+  margin-bottom: 8px !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .post-heading h1 {
+    font-size: 38px !important;
+  }
+}
+.intro-header .post-heading .subheading {
+  font-size: 16px !important;
+  color: rgba(255,255,255,0.75) !important;
+  margin: 6px 0 0 !important;
+}
+.intro-header .post-heading .meta {
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.55) !important;
+  font-style: normal !important;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* ===== Article body typography ===== */
 .post-container {
   font-family: Georgia, "Noto Serif SC", "Source Han Serif SC", serif !important;
   font-size: 18px !important;
   line-height: 1.75 !important;
   color: #292524 !important;
 }
-.post-container p { margin-bottom: 1.5em; }
+.post-container p { margin-bottom: 1.5em !important; }
 .post-container h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   font-size: 24px !important;
@@ -1072,8 +1139,8 @@ body {
   border-bottom: 1px solid rgba(37,99,235,0.25);
 }
 .post-container a:hover { border-bottom-color: #2563eb; text-decoration: none !important; }
-.post-container ul, .post-container ol { margin-bottom: 1.5em; padding-left: 1.5em; }
-.post-container li { margin-bottom: 0.3em; }
+.post-container ul, .post-container ol { margin-bottom: 1.5em !important; padding-left: 1.5em !important; }
+.post-container li { margin-bottom: 0.3em !important; }
 .post-container blockquote {
   margin: 1.5em 0 !important;
   padding: 14px 20px !important;
@@ -1095,33 +1162,16 @@ body {
   .post-container { max-width: 700px; margin: 0 auto; }
 }
 
-.intro-header { height: 240px !important; display: flex !important; align-items: center !important; }
-.intro-header .post-heading h1 { font-size: 30px !important; margin-bottom: 8px !important; }
-@media only screen and (min-width: 768px) {
-  .intro-header { height: 240px !important; }
-  .intro-header .post-heading h1 { font-size: 36px !important; }
-}
-.intro-header .post-heading .subheading {
-  font-size: 16px !important;
-  color: rgba(255,255,255,0.75) !important;
-  margin: 6px 0 0 !important;
-}
-.intro-header .post-heading .meta {
-  font-size: 13px !important;
-  color: rgba(255,255,255,0.55) !important;
-  font-style: normal !important;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
-}
-
-@media only screen and (min-width: 768px) {
-  .intro-header .post-heading h1 { font-size: 55px; }
-  .intro-header .post-heading .subheading { font-size: 30px; }
-  .intro-header .post-heading .meta { font-size: 20px; }
-}
-
+/* ===== Nav tweaks ===== */
 .navbar-custom { min-height: 48px !important; }
 .navbar-custom .navbar-brand { padding: 12px 15px !important; font-size: 16px !important; }
 .navbar-custom .nav li a { padding: 12px 15px !important; font-size: 14px !important; }
+
+/* ===== Homepage cards (inside page layout) ===== */
+.postlist-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
 .post-card {
   background: #fff;
@@ -1181,8 +1231,10 @@ body {
 .pagination a:hover { text-decoration: underline; }
 .page-num { color: #a8a29e; margin: 0 12px; }
 
+/* ===== Comment ===== */
 .comment { margin-top: 30px; }
 
+/* ===== Sidebar tags as color blocks ===== */
 .sidebar-container .tags a {
   border: none !important;
   padding: 2px 8px !important;
@@ -1193,6 +1245,7 @@ body {
 }
 .sidebar-container .tags a:hover { background: #57534e !important; color: #fff !important; }
 
+/* ===== Catalog: hide sub-headings ===== */
 .side-catalog .catalog-body .h3_nav,
 .side-catalog .catalog-body .h4_nav,
 .side-catalog .catalog-body .h5_nav,
@@ -1200,10 +1253,13 @@ body {
   display: none !important;
 }
 
+/* ===== Mobile ===== */
 @media (max-width: 768px) {
   .post-container { font-size: 16px !important; }
   .post-container h2 { font-size: 20px !important; }
-  .intro-header { height: 200px !important; }
+  .intro-header .post-heading { padding: 60px 0 30px !important; }
   .intro-header .post-heading h1 { font-size: 24px !important; }
+  .intro-header .site-heading { padding: 40px 0 30px !important; }
+  .intro-header .site-heading h1 { font-size: 26px !important; }
   .post-card { width: 100% !important; margin-right: 0 !important; }
 }
