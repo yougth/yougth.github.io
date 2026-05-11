@@ -85,6 +85,26 @@ service-worker: false
 
 
 
+# Tag colors for card display
+tag_colors:
+  推荐系统: "#2563eb"
+  投资: "#059669"
+  读书: "#d97706"
+  PUA: "#dc2626"
+  职场: "#0891b2"
+  机器学习: "#2563eb"
+  哲学: "#78716c"
+  zsh: "#1e293b"
+  短视频: "#db2777"
+  房地产: "#65a30d"
+  心理学: "#9333ea"
+  亲密关系: "#7c3aed"
+  总结: "#475569"
+  成长: "#ca8a04"
+  规划: "#57534e"
+  生活: "#db2777"
+  人性: "#7c3aed"
+
 # Friends
 friends: [
     {

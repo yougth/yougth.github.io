@@ -7,7 +7,6 @@ layout: default
         position: relative;
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
-
     {% if page.header-mask %}
     header.intro-header .header-mask{
         width: 100%;
@@ -17,7 +16,7 @@ layout: default
     }
     {% endif %}
 </style>
-<header class="intro-header" >
+<header class="intro-header">
     <div class="header-mask"></div>
     <div class="container">
         <div class="row">
@@ -29,12 +28,9 @@ layout: default
                         {% endfor %}
                     </div>
                     <h1>{{ page.title }}</h1>
-                    {% comment %}
-                        always create a h2 for keeping the margin , Hux
-                    {% endcomment %}
-                    {% comment %} if page.subtitle {% endcomment %}
+                    {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% comment %} endif {% endcomment %}
+                    {% endif %}
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
@@ -86,7 +82,7 @@ layout: default
                                 data-reactions-enabled="1"
                                 data-emit-metadata="0"
                                 data-input-position="bottom"
-				data-theme="light"
+                                data-theme="light"
                                 data-lang="zh-CN"
                                 crossorigin="anonymous"
                                 async>
@@ -169,7 +165,6 @@ layout: default
     })
 </script>
 <style>
-    /* place left on bigger screen */
     @media all and (min-width: 800px) {
         .anchorjs-link{
             position: absolute;
