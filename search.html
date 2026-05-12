@@ -2,27 +2,23 @@
 layout: default
 title: SEARCH
 ---
-<div class="container" style="margin-top: 100px; min-height: 60vh;">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <input type="text" id="search-input" placeholder="输入关键字搜索干货..." style="width: 100%; padding: 12px 20px; font-size: 18px; border-radius: 8px; border: 2px solid #ddd; outline: none; transition: border-color 0.3s;">
-            <ul id="results-container" style="list-style: none; padding-left: 0; margin-top: 30px;"></ul>
-        </div>
-    </div>
+<div class="page-content-wrap" style="min-height:60vh">
+  <h2>Search</h2>
+  <input type="text" id="search-input" placeholder="输入关键字搜索..." style="width:100%;padding:12px 18px;font-size:16px;border-radius:8px;border:2px solid #e7e5e4;outline:none;font-family:-apple-system,BlinkMacSystemFont,sans-serif;transition:border-color .3s;margin-bottom:20px">
+  <ul id="results-container" style="list-style:none;padding:0"></ul>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-jekyll-search/1.9.2/simple-jekyll-search.min.js"></script>
 <script>
-    // 监听输入框变色特效
-    document.getElementById('search-input').addEventListener('focus', function() { this.style.borderColor = '#0085a1'; });
-    document.getElementById('search-input').addEventListener('blur', function() { this.style.borderColor = '#ddd'; });
+  var si = document.getElementById('search-input');
+  si.addEventListener('focus', function(){ si.style.borderColor='#2563eb' });
+  si.addEventListener('blur', function(){ si.style.borderColor='#e7e5e4' });
 
-    // 初始化搜索
-    SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '/search.json',
-        searchResultTemplate: '<li style="margin-bottom: 20px; border-bottom: 1px solid #f3f3f3; padding-bottom: 15px;"><a href="{url}" style="font-size: 20px; color: #404040; font-weight: 600;">{title}</a><br><small style="color: #999;">{date} &nbsp; {tags}</small></li>',
-        noResultsText: '<li style="color: #999; text-align: center; margin-top: 50px;">没有找到相关内容，换个关键词试试？</li>'
-    });
+  SimpleJekyllSearch({
+    searchInput: si,
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li style="margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid #f0efed"><a href="{url}" style="font-size:18px;color:#1c1917;font-weight:600;text-decoration:none;border-bottom:none">{title}</a><br><small style="color:#a8a29e">{date}</small></li>',
+    noResultsText: '<li style="color:#a8a29e;text-align:center;margin-top:40px">没有找到相关内容</li>'
+  });
 </script>
