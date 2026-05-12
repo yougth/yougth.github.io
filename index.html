@@ -1,9 +1,14 @@
 ---
-layout: page
-description: "大神养成中....."
+layout: default
 ---
 
-{% for post in paginator.posts %}
+<div class="home-hero">
+  <h1>Yougth Blog</h1>
+  <p>推荐系统、投资、读书笔记和个人思考</p>
+</div>
+
+<div class="home-grid">
+{% for post in site.posts %}
 <article class="post-card">
   <div class="card-inner">
     <div class="card-tags">
@@ -22,15 +27,32 @@ description: "大神养成中....."
   </div>
 </article>
 {% endfor %}
-
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-prev">← Newer</a>
-  {% endif %}
-  <span class="page-num">{{ paginator.page }} / {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="page-next">Older →</a>
-  {% endif %}
 </div>
-{% endif %}
+
+<div class="site-footer">
+  Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
+</div>
+
+<script>
+(function() {
+  var cards = document.querySelectorAll('.post-card');
+  if (!cards.length) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(function(card, i) {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(12px)';
+    card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    card.style.transitionDelay = (Math.min(i, 20) * 0.03) + 's';
+    observer.observe(card);
+  });
+})();
+</script>
