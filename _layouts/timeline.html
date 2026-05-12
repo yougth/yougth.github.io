@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="tl-wrap">
+
+  <div class="tl-header">
+    <h1>TIMELINE</h1>
+    <div class="sub">"The sandglass remembers the time we lost."</div>
+    <div class="meta">2017 — 2025 · 持续记录</div>
+  </div>
+
+  <div class="tl-content">
+    {{ content }}
+  </div>
+
+</div>
+
+<div class="site-footer">
+  Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
+</div>
+
+<script>
+(function(){
+  var h3s = document.querySelectorAll('.tl-content h3');
+  var currentYear = null;
+  h3s.forEach(function(h3) {
+    var match = h3.textContent.match(/^(\d{4})-/);
+    if (!match) return;
+    var year = match[1];
+    if (year !== currentYear) {
+      currentYear = year;
+      var sep = document.createElement('div');
+      sep.className = 'year-sep';
+      sep.innerHTML = '<span class="year">' + year + '</span><span class="line"></span>';
+      h3.parentNode.insertBefore(sep, h3);
+    }
+  });
+})();
+</script>

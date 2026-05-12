@@ -1,8 +1,7 @@
 ---
-layout: page
+layout: timeline
 title: "TIMELINE"
-description: "The sandflass remembers the time we lost."  ##I don't need sex \n Life fuck me everyday
-header-img: "img/post-bg-coffee.jpeg"
+description: "The sandglass remembers the time we lost."
 ---
 ***
 ### 2025-05-26
