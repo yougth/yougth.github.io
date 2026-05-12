@@ -1,163 +1,92 @@
 ---
-layout: page
+layout: default
 title: "About"
 description: "Hey, this is Yougth."
-header-img: "img/post-bg-rwd.jpg"
 ---
 
-<!-- Language Selector -->
-<select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
-</select>
+<article class="article-wrap">
 
-<!-- Chinese Version -->
-<div class="zh post-container">
+  <header class="post-header">
+    <h1>About</h1>
+    <div class="meta">Hey, this is Yougth.</div>
+  </header>
 
-    <!--copied from markdown -->
-    <blockquote><p>读万卷书，行万里路<br>
-    技术无止境...</p></blockquote>
+  <div class="content">
 
-    <p>Hey，我是<strong>yougth</strong>，一只程序猿，做机器学习以及推荐相关，在校的时候搞过acm竞赛,现在北京工作。</p>
+    <!-- Language Selector -->
+    <select class="sel-lang" onchange="onLanChange(this.options[this.options.selectedIndex].value)" style="margin-bottom:16px;padding:4px 8px;border-radius:4px;border:1px solid #e7e5e4;font-size:13px">
+        <option value="0" selected> 中文 Chinese </option>
+        <option value="1"> 英文 English </option>
+    </select>
 
-    <p>这是我搭建的新的个人博客。我在GitHub主页<a href="https://github.com/yougth"> 👉  GitHub·BY</a> 与 以前blog 👉  <a href="http://blog.csdn.net/y990041769?viewmode=list">csdn blog</a>。</p>
+    <!-- Chinese Version -->
+    <div class="zh">
+        <blockquote><p>读万卷书，行万里路<br>技术无止境...</p></blockquote>
 
-    <p>工作、学习之余，比较喜欢健身，已经小有成就感了，欢迎有兴趣的交流交流</p>
+        <p>Hey，我是<strong>yougth</strong>，一只程序猿，做机器学习以及推荐相关，在校的时候搞过acm竞赛，现在北京工作。</p>
 
-    <p>最近还迷上了机车，不知道是不是好的开始。</p>
+        <p>这是我搭建的新的个人博客。我在GitHub主页 <a href="https://github.com/yougth">GitHub·BY</a> 与 以前blog <a href="http://blog.csdn.net/y990041769?viewmode=list">csdn blog</a>。</p>
 
-    <p></p>
-    
-    <h5>Talks</h5>
+        <p>工作、学习之余，比较喜欢健身，已经小有成就感了，欢迎有兴趣的交流交流。</p>
 
-    <ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
-    <li><a href="http://huangxuan.me/">Hux</a></li>    </ul>
-</div>
+        <p>最近还迷上了机车，不知道是不是好的开始。</p>
 
-<!-- English Version -->
-<div class="en post-container">
-    <blockquote><p>Yet another Recommend Developer. <br>
-    Yet another Life-long Student.</p></blockquote>
-
-    <p>Hi, I am <strong>yougth</strong>， I am an Recommender system software engineer and currently working in Beijing</p>
-
-    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.comyougth">Github.Yougth</a>.</p>
-    
-    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
-
-    <h5>Talks</h5>
-
-    <ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
-    <li><a href="https://qiubaiying.github.io">BY</a></li>
-    </ul>
-</div>
-
-<!-- Handle Language Change -->
-<script type="text/javascript">
-    // get nodes
-    var $zh = document.querySelector(".zh");
-    var $en = document.querySelector(".en");
-    var $select = document.querySelector("select");
-
-    // bind hashchange event
-    window.addEventListener('hashchange', _render);
-
-    // handle render
-    function _render(){
-        var _hash = window.location.hash;
-        // en
-        if(_hash == "#en"){
-            $select.selectedIndex = 1;
-            $en.style.display = "block";
-            $zh.style.display = "none";
-        // zh by default
-        }else{
-            // not trigger onChange, otherwise cause a loop call.
-            $select.selectedIndex = 0;
-            $zh.style.display = "block";
-            $en.style.display = "none";
-        }
-    }
-
-    // handle select change
-    function onLanChange(index){
-        if(index == 0){
-            window.location.hash = "#zh"
-        }else{
-            window.location.hash = "#en"
-        }
-    }
-
-    // init
-    _render();
-</script>
-
-
-
-{% if site.duoshuo_username %}
-<!-- 多说评论框 start -->
-<div class="comment">
-    <!-- This id is used for indexing my loss comments forcedly -->
-    <div class="ds-thread"
-    {% if site.duoshuo_username == "qiubaiying" %}
-        data-thread-id="0ee040117ec56f17aa7e2523d1eae19b"
-    {% else %}
-    <!-- U can just use this key generated to index comments at page about -->
-        data-thread-key="{{site.duoshuo_username}}/about"
-    {% endif %}
-
-    data-title="{{page.title}}"
-    data-url="{{site.url}}/about/"></div>
-</div>
-<!-- 多说评论框 end -->
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User hacking by Hux
-    var _user = '{{site.duoshuo_username}}';
-
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
-{% endif %}
-
-
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-
+        <h5>Talks</h5>
+        <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+        <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+        <li><a href="http://huangxuan.me/">Hux</a></li>
+        </ul>
     </div>
+
+    <!-- English Version -->
+    <div class="en" style="display:none">
+        <blockquote><p>Yet another Recommend Developer.<br>Yet another Life-long Student.</p></blockquote>
+
+        <p>Hi, I am <strong>yougth</strong>. I am a Recommender System software engineer currently working in Beijing.</p>
+
+        <p>This is my personal blog, through making Github Pages and Jekyll. My GitHub: <a href="https://github.com/yougth">Github·Yougth</a>.</p>
+
+        <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
+
+        <h5>Talks</h5>
+        <ul>
+        <li><a href="https://github.com">GitHub</a></li>
+        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
+        <li><a href="https://pages.github.com/">GitHub Pages</a></li>
+        <li><a href="https://qiubaiying.github.io">BY</a></li>
+        </ul>
+    </div>
+
+  </div>
+
+</article>
+
+<div class="site-footer">
+  Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
 </div>
-<!-- disqus 评论框 end -->
 
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+<script>
+(function(){
+  var zh = document.querySelector('.zh');
+  var en = document.querySelector('.en');
+  var sel = document.querySelector('.sel-lang');
+  function render(){
+    if(window.location.hash === '#en'){
+      sel.selectedIndex = 1;
+      en.style.display = 'block';
+      zh.style.display = 'none';
+    } else {
+      sel.selectedIndex = 0;
+      zh.style.display = 'block';
+      en.style.display = 'none';
+    }
+  }
+  window.addEventListener('hashchange', render);
+  window.onLanChange = function(idx){
+    window.location.hash = idx === 0 ? '#zh' : '#en';
+  };
+  render();
+})();
 </script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}
