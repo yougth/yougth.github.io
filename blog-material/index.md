@@ -1,17 +1,8 @@
 ---
-layout: default
+layout: material
 title: "material"
 description: "推荐系统、机器学习相关资源整理"
 ---
-
-<article class="article-wrap">
-
-  <header class="post-header">
-    <h1>MATERIAL</h1>
-    <div class="meta">推荐系统 · 机器学习 · 资源整理</div>
-  </header>
-
-  <div class="content">
 
 ### 推荐系统资料
  - 推荐系统调研报告及综述 [[PDF下载]](https://pan.baidu.com/s/1vbmuK1TyzycitDoxAMgzgg)，介绍非常详细的一篇文档。
@@ -54,11 +45,3 @@ description: "推荐系统、机器学习相关资源整理"
 ### 数学
  - LDA数学八卦 [[PDF下载]](https://pan.baidu.com/s/1-3lg-hz0E2pbIk2bXDAzjw)
  - 正态分布的前世今生 [[PDF下载]](https://pan.baidu.com/s/1q0Gca5nxR5EiTkSdrO8hrw)
-
-  </div>
-
-</article>
-
-<div class="site-footer">
-  Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}
-</div>
