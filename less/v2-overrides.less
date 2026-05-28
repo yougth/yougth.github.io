@@ -424,3 +424,57 @@ footer { display: none !important; }
   .content h2 { font-size: 20px !important; }
   .post-footer { flex-direction: column; gap: 12px; text-align: center; }
 }
+
+/* ===== V2 IMAGE STYLES (photography, full-bleed, wide, caption) ===== */
+.img-full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  max-width: 100vw;
+  border-radius: 0;
+}
+.img-full-bleed img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+.img-wide {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-wide img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+.img-caption {
+  margin: 2em 0;
+}
+.img-caption img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+.img-caption figcaption,
+.img-caption .caption-text {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  color: #a8a29e;
+  margin-top: 8px;
+  text-align: center;
+}
+.img-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 2em 0;
+}
+.img-pair img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+@media (max-width: 768px) {
+  .img-pair { grid-template-columns: 1fr; }
+  .img-wide { max-width: 100%; }
+}
