@@ -13,98 +13,41 @@ description: "Hey, this is Yougth."
 
   <div class="content">
 
-    <!-- Language Selector -->
     <select class="sel-lang" onchange="onLanChange(this.options[this.options.selectedIndex].value)" style="margin-bottom:16px;padding:4px 8px;border-radius:4px;border:1px solid #e7e5e4;font-size:13px">
         <option value="0" selected> 中文 Chinese </option>
         <option value="1"> 英文 English </option>
     </select>
 
-    <!-- Chinese Version -->
     <div class="zh">
-
-        <p>读万卷书，行万里路。技术无止境。</p>
-
-        <div class="img-caption">
-          <img src="{{ site.baseurl }}/img/about-BY-yougth-v2.jpg" alt="yougth">
-          <div class="caption-text">北京 · 冬</div>
+    {% for s in site.data.about %}
+      <div class="about-section">
+        {% if s.photo %}
+        <div class="about-photo">
+          <img src="{{ site.baseurl }}{{ s.photo }}" alt="yougth">
+          <div class="caption-text">{{ s.caption_zh }}</div>
         </div>
-
-        <p>Hey，我是<strong>yougth</strong>，一只程序猿，做机器学习以及推荐相关，在校的时候搞过acm竞赛，现在北京工作。</p>
-
-        <p>这是我搭建的个人博客，在 <a href="https://github.com/yougth">GitHub</a> 与 <a href="http://blog.csdn.net/y990041769?viewmode=list">CSDN</a> 记录技术成长。</p>
-
-        <div class="img-wide">
-          <div class="img-caption">
-            <img src="{{ site.baseurl }}/img/photos/life-1.jpg" alt="workspace">
-            <div class="caption-text">日常</div>
-          </div>
+        {% endif %}
+        <div class="about-text">
+          {{ s.text_zh | markdownify }}
         </div>
-
-        <p>工作、学习之余，比较喜欢健身，已经小有成就感了，欢迎有兴趣的交流交流。</p>
-
-        <div class="img-pair">
-          <div class="img-caption">
-            <img src="{{ site.baseurl }}/img/photos/life-2.jpg" alt="coffee">
-            <div class="caption-text">咖啡时光</div>
-          </div>
-          <div class="img-caption">
-            <img src="{{ site.baseurl }}/img/photos/life-3.jpg" alt="universe">
-            <div class="caption-text">仰望</div>
-          </div>
-        </div>
-
-        <p>最近还迷上了机车，不知道是不是好的开始。也喜欢摄影，用镜头记录生活里的光和影。</p>
-
-        <div class="img-full-bleed">
-          <img src="{{ site.baseurl }}/img/photos/travel-1.jpg" alt="landscape">
-        </div>
-
-        <p style="text-align:center;font-size:13px;color:#a8a29e;margin-top:-1em;margin-bottom:2em;">在路上</p>
-
+      </div>
+    {% endfor %}
     </div>
 
-    <!-- English Version -->
     <div class="en" style="display:none">
-
-        <p>Read ten thousand books, travel ten thousand miles. Technology has no limits.</p>
-
-        <div class="img-caption">
-          <img src="{{ site.baseurl }}/img/about-BY-yougth-v2.jpg" alt="yougth">
-          <div class="caption-text">Beijing · Winter</div>
+    {% for s in site.data.about %}
+      <div class="about-section">
+        {% if s.photo %}
+        <div class="about-photo">
+          <img src="{{ site.baseurl }}{{ s.photo }}" alt="yougth">
+          <div class="caption-text">{{ s.caption_en }}</div>
         </div>
-
-        <p>Hi, I am <strong>yougth</strong>. I am a Recommender System engineer currently working in Beijing.</p>
-
-        <p>This is my personal blog. My <a href="https://github.com/yougth">GitHub</a> and <a href="http://blog.csdn.net/y990041769?viewmode=list">CSDN</a>.</p>
-
-        <div class="img-wide">
-          <div class="img-caption">
-            <img src="{{ site.baseurl }}/img/photos/life-1.jpg" alt="workspace">
-            <div class="caption-text">Daily</div>
-          </div>
+        {% endif %}
+        <div class="about-text">
+          {{ s.text_en | markdownify }}
         </div>
-
-        <p>I am a sports enthusiast. I like fitness, running and boxing.</p>
-
-        <div class="img-pair">
-          <div class="img-caption">
-            <img src="{{ site.baseurl }}/img/photos/life-2.jpg" alt="coffee">
-            <div class="caption-text">Coffee time</div>
-          </div>
-          <div class="img-caption">
-            <img src="{{ site.baseurl }}/img/photos/life-3.jpg" alt="universe">
-            <div class="caption-text">Looking up</div>
-          </div>
-        </div>
-
-        <p>Recently I got into motorcycles. I also enjoy photography — capturing light and shadow in everyday life.</p>
-
-        <div class="img-full-bleed">
-          <img src="{{ site.baseurl }}/img/photos/travel-1.jpg" alt="landscape">
-        </div>
-
-        <p style="text-align:center;font-size:13px;color:#a8a29e;margin-top:-1em;margin-bottom:2em;">On the road</p>
-
+      </div>
+    {% endfor %}
     </div>
 
   </div>

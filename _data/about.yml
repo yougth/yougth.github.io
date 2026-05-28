@@ -1,0 +1,18 @@
+# About 页面内容 —— 编辑此文件即可，无需改 HTML
+# 每个条目是一个 section，按顺序显示
+# photo/caption 可选，没有则只显示文字
+
+- photo: /img/about-BY-yougth-v2.jpg
+  caption_zh: "青岛 · 夏"
+  caption_en: "Qingdao · Summer"
+  text_zh: "读万卷书，行万里路。技术无止境。\n\nHey，我是**yougth**，一只程序猿，做机器学习以及推荐相关，在校的时候搞过acm竞赛，现在北京工作。"
+  text_en: "Read ten thousand books, travel ten thousand miles. Technology has no limits.\n\nHi, I am **yougth**. I am a Recommender System engineer currently working in Beijing."
+
+- text_zh: "这是我搭建的个人博客，在 [GitHub](https://github.com/yougth) 与 [CSDN](http://blog.csdn.net/y990041769?viewmode=list) 记录技术成长。"
+  text_en: "This is my personal blog. My [GitHub](https://github.com/yougth) and [CSDN](http://blog.csdn.net/y990041769?viewmode=list)."
+
+- text_zh: "工作、学习之余，比较喜欢健身，已经小有成就感了，欢迎有兴趣的交流交流。"
+  text_en: "I am a sports enthusiast. I like fitness, running and boxing."
+
+- text_zh: "最近还迷上了机车，不知道是不是好的开始。"
+  text_en: "Recently I got into motorcycles."

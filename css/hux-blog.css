@@ -2008,6 +2008,51 @@ footer {
   }
 }
 /* ===== V2 IMAGE STYLES (photography, full-bleed, wide, caption) ===== */
+.about-section {
+  margin-bottom: 2em;
+}
+.about-photo {
+  margin: 0 0 1.5em;
+}
+.about-photo img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  display: block;
+}
+.about-photo .caption-text {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  color: #a8a29e;
+  margin-top: 8px;
+}
+@media (min-width: 768px) {
+  .about-section {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+  }
+  .about-section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .about-photo {
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .about-photo img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .about-text {
+    flex: 1;
+  }
+}
+@media (max-width: 768px) {
+  .about-photo img {
+    max-width: 100%;
+  }
+}
 .img-full-bleed {
   width: 100vw;
   margin-left: calc(0vw);
