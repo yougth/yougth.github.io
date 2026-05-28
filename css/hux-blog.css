@@ -1096,6 +1096,7 @@ img::-moz-selection {
 /* ===== Warm gray background everywhere ===== */
 body {
   background: #f5f5f4 !important;
+  padding-top: 56px !important;
 }
 /* ===== Page layout: shrink the big hero header ===== */
 .intro-header .site-heading,
@@ -1388,7 +1389,7 @@ body {
 .home-hero {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 96px 24px 36px;
+  padding: 40px 24px 36px;
   text-align: left;
 }
 .home-hero h1 {
@@ -1421,7 +1422,7 @@ body {
 }
 @media (max-width: 768px) {
   .home-hero {
-    padding: 72px 18px 24px;
+    padding: 24px 18px 24px;
   }
   .home-hero h1 {
     font-size: 26px;
@@ -1893,7 +1894,7 @@ body {
 /* ===== V2 GENERIC PAGE (About, Material etc) ===== */
 .page-content-wrap {
   max-width: 700px;
-  margin: 56px auto 0;
+  margin: 0 auto 0;
   padding: 40px 32px 60px;
   background: #fff;
   border-radius: 8px 8px 0 0;
