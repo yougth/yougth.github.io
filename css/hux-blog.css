@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic&subset=latin,latin-ext);
 @media (min-width: 1200px) {
   .post-container,
   .sidebar-container {
@@ -69,7 +70,7 @@
   display: none;
 }
 .side-catalog .catalog-toggle::before {
-  content: "\2212";
+  content: "−";
   position: relative;
   margin-right: 5px;
   bottom: 1px;
@@ -130,6 +131,10 @@
   }
 }
 body {
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   font-size: 16px;
@@ -145,6 +150,10 @@ h3,
 h4,
 h5,
 h6 {
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   line-height: 1.1;
@@ -306,6 +315,11 @@ pre code {
   letter-spacing: 0.5px;
 }
 @media only screen and (max-width: 767px) {
+  /**
+	 * Layout
+	 * Since V1.6 we use absolute positioning to prevent to expand container-fluid
+	 * which would cover tags. A absolute positioning make a new layer.
+	 */
   .navbar-default .navbar-collapse {
     position: absolute;
     right: 0;
@@ -316,7 +330,14 @@ pre code {
     border-radius: 2px;
     width: 170px;
   }
+  /**
+	 * Animation
+	 * HuxBlog-Navbar using genuine Material Design Animation
+	 */
   #huxblog_navbar {
+    /**
+		 * Sharable code and 'out' function
+		 */
     opacity: 0;
     transform: scaleX(0);
     transform-origin: top right;
@@ -324,6 +345,9 @@ pre code {
     -webkit-transform: scaleX(0);
     -webkit-transform-origin: top right;
     -webkit-transition: all 200ms cubic-bezier(0.47, 0, 0.4, 0.99) 0ms;
+    /**
+		 *'In' Animation
+		 */
   }
   #huxblog_navbar a {
     font-size: 13px;
@@ -370,6 +394,10 @@ pre code {
   left: 0;
   width: 100%;
   z-index: 3;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
 }
@@ -426,6 +454,7 @@ pre code {
     -webkit-transition: background-color 0.3s;
     -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
+    /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -435,6 +464,7 @@ pre code {
     backface-visibility: hidden;
   }
   .navbar-custom.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -61px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -458,6 +488,7 @@ pre code {
     color: #0085a1;
   }
   .navbar-custom.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
     -webkit-transform: translate3d(0, 100%, 0);
     -moz-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
@@ -474,10 +505,12 @@ pre code {
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 0px;
+  /* 0 on mobile, modify by Hux */
 }
 @media only screen and (min-width: 768px) {
   .intro-header {
     margin-bottom: 20px;
+    /* response on desktop */
   }
 }
 .intro-header .site-heading,
@@ -512,6 +545,10 @@ pre code {
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   font-size: 18px;
@@ -536,6 +573,10 @@ pre code {
   display: block;
 }
 .intro-header .post-heading .subheading {
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   font-size: 17px;
@@ -713,6 +754,10 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 .btn {
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   text-transform: uppercase;
@@ -738,6 +783,10 @@ form .row:first-child .floating-label-form-group {
 }
 .pager li > a,
 .pager li > span {
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
   text-transform: uppercase;
@@ -794,6 +843,7 @@ img::-moz-selection {
   color: white;
   background: transparent;
 }
+/* Hux add tags support */
 .tags {
   margin-bottom: -5px;
 }
@@ -882,6 +932,10 @@ img::-moz-selection {
 }
 .one-tag-list .tag-text {
   font-weight: 200;
+  /* Hux learn from
+     *     TypeIsBeautiful,
+     *     [This Post](http://zhuanlan.zhihu.com/ibuick/20186806) etc.
+     */
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   line-height: 1.7;
 }
@@ -919,12 +973,15 @@ img::-moz-selection {
     font-size: 18px;
   }
 }
+/* Tags support End*/
+/* Hux make all img responsible in post-container */
 .post-container img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 1.5em auto 1.6em auto;
 }
+/* Hux Optimize UserExperience */
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover {
   background-color: inherit;
@@ -932,6 +989,7 @@ img::-moz-selection {
 .navbar-default .navbar-toggle:active {
   background-color: rgba(255, 255, 255, 0.25);
 }
+/* Hux customize Style for navBar button */
 .navbar-default .navbar-toggle {
   border-color: transparent;
   padding: 19px 16px;
@@ -948,6 +1006,7 @@ img::-moz-selection {
 .navbar-default .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 3px;
 }
+/* Hux customize Style for Duoshuo */
 .comment {
   margin-top: 20px;
 }
@@ -1031,17 +1090,13 @@ img::-moz-selection {
 .page-fullscreen footer .copyright a:hover {
   color: #ddd;
 }
-@import url(https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic&subset=latin,latin-ext);
-
 /*
  * Yougth Blog V2 - Magazine Card Style
  */
-
 /* ===== Warm gray background everywhere ===== */
 body {
   background: #f5f5f4 !important;
 }
-
 /* ===== Page layout: shrink the big hero header ===== */
 /* Applies to homepage, timeline, about, etc */
 .intro-header .site-heading,
@@ -1067,7 +1122,7 @@ body {
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
   font-size: 15px !important;
-  color: rgba(255,255,255,0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading .subheading,
@@ -1075,7 +1130,6 @@ body {
     font-size: 18px !important;
   }
 }
-
 /* ===== Article post header smaller ===== */
 .intro-header .post-heading {
   padding: 80px 0 40px !important;
@@ -1096,16 +1150,15 @@ body {
 }
 .intro-header .post-heading .subheading {
   font-size: 16px !important;
-  color: rgba(255,255,255,0.75) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   margin: 6px 0 0 !important;
 }
 .intro-header .post-heading .meta {
   font-size: 13px !important;
-  color: rgba(255,255,255,0.55) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
   font-style: normal !important;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
 }
-
 /* ===== Article body typography ===== */
 .post-container {
   font-family: Georgia, "Noto Serif SC", "Source Han Serif SC", serif !important;
@@ -1113,7 +1166,9 @@ body {
   line-height: 1.75 !important;
   color: #292524 !important;
 }
-.post-container p { margin-bottom: 1.5em !important; }
+.post-container p {
+  margin-bottom: 1.5em !important;
+}
 .post-container h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   font-size: 24px !important;
@@ -1132,15 +1187,27 @@ body {
   margin-top: 1.5em !important;
   margin-bottom: 0.6em !important;
 }
-.post-container strong { color: #1c1917; font-weight: 600; }
+.post-container strong {
+  color: #1c1917;
+  font-weight: 600;
+}
 .post-container a {
   color: #2563eb !important;
   text-decoration: none !important;
-  border-bottom: 1px solid rgba(37,99,235,0.25);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.25);
 }
-.post-container a:hover { border-bottom-color: #2563eb; text-decoration: none !important; }
-.post-container ul, .post-container ol { margin-bottom: 1.5em !important; padding-left: 1.5em !important; }
-.post-container li { margin-bottom: 0.3em !important; }
+.post-container a:hover {
+  border-bottom-color: #2563eb;
+  text-decoration: none !important;
+}
+.post-container ul,
+.post-container ol {
+  margin-bottom: 1.5em !important;
+  padding-left: 1.5em !important;
+}
+.post-container li {
+  margin-bottom: 0.3em !important;
+}
 .post-container blockquote {
   margin: 1.5em 0 !important;
   padding: 14px 20px !important;
@@ -1150,7 +1217,11 @@ body {
   font-style: italic;
   border-radius: 0 4px 4px 0 !important;
 }
-.post-container hr { margin: 2.5em 0 !important; border: none !important; border-top: 1px solid #e7e5e4 !important; }
+.post-container hr {
+  margin: 2.5em 0 !important;
+  border: none !important;
+  border-top: 1px solid #e7e5e4 !important;
+}
 .post-container code {
   font-family: "SF Mono", "Fira Code", monospace !important;
   font-size: 0.85em !important;
@@ -1159,30 +1230,44 @@ body {
   border-radius: 3px !important;
 }
 @media (min-width: 1200px) {
-  .post-container { max-width: 700px; margin: 0 auto; }
+  .post-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
-
 /* ===== Nav tweaks ===== */
-.navbar-custom { min-height: 48px !important; }
-.navbar-custom .navbar-brand { padding: 12px 15px !important; font-size: 16px !important; }
-.navbar-custom .nav li a { padding: 12px 15px !important; font-size: 14px !important; }
-
+.navbar-custom {
+  min-height: 48px !important;
+}
+.navbar-custom .navbar-brand {
+  padding: 12px 15px !important;
+  font-size: 16px !important;
+}
+.navbar-custom .nav li a {
+  padding: 12px 15px !important;
+  font-size: 14px !important;
+}
 /* ===== Homepage cards (inside page layout) ===== */
 .postlist-container {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-
 .post-card {
   background: #fff;
   border-radius: 8px;
   margin-bottom: 20px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.2s;
 }
-.post-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-.card-inner { padding: 24px; }
-.card-tags { margin-bottom: 10px; }
+.post-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.card-inner {
+  padding: 24px;
+}
+.card-tags {
+  margin-bottom: 10px;
+}
 .card-tag {
   display: inline-block;
   padding: 2px 10px;
@@ -1201,9 +1286,20 @@ body {
   padding: 0 !important;
   border: none !important;
 }
-.card-title a { color: #1c1917 !important; text-decoration: none !important; border-bottom: none !important; }
-.card-title a:hover { color: #2563eb !important; }
-.card-subtitle { font-size: 14px; color: #78716c; margin: 0 0 8px; line-height: 1.4; }
+.card-title a {
+  color: #1c1917 !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.card-title a:hover {
+  color: #2563eb !important;
+}
+.card-subtitle {
+  font-size: 14px;
+  color: #78716c;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
 .card-meta {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 12px;
@@ -1217,9 +1313,10 @@ body {
     margin-right: 2%;
     vertical-align: top;
   }
-  .post-card:nth-child(2n) { margin-right: 0; }
+  .post-card:nth-child(2n) {
+    margin-right: 0;
+  }
 }
-
 .pagination {
   text-align: center;
   padding: 30px 0;
@@ -1227,13 +1324,22 @@ body {
   font-size: 14px;
   clear: both;
 }
-.pagination a { color: #2563eb; text-decoration: none; padding: 4px 12px; }
-.pagination a:hover { text-decoration: underline; }
-.page-num { color: #a8a29e; margin: 0 12px; }
-
+.pagination a {
+  color: #2563eb;
+  text-decoration: none;
+  padding: 4px 12px;
+}
+.pagination a:hover {
+  text-decoration: underline;
+}
+.page-num {
+  color: #a8a29e;
+  margin: 0 12px;
+}
 /* ===== Comment ===== */
-.comment { margin-top: 30px; }
-
+.comment {
+  margin-top: 30px;
+}
 /* ===== Sidebar tags as color blocks ===== */
 .sidebar-container .tags a {
   border: none !important;
@@ -1243,8 +1349,10 @@ body {
   color: #fff !important;
   background: #78716c !important;
 }
-.sidebar-container .tags a:hover { background: #57534e !important; color: #fff !important; }
-
+.sidebar-container .tags a:hover {
+  background: #57534e !important;
+  color: #fff !important;
+}
 /* ===== Catalog: hide sub-headings ===== */
 .side-catalog .catalog-body .h3_nav,
 .side-catalog .catalog-body .h4_nav,
@@ -1252,14 +1360,28 @@ body {
 .side-catalog .catalog-body .h6_nav {
   display: none !important;
 }
-
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
-  .post-container { font-size: 16px !important; }
-  .post-container h2 { font-size: 20px !important; }
-  .intro-header .post-heading { padding: 60px 0 30px !important; }
-  .intro-header .post-heading h1 { font-size: 24px !important; }
-  .intro-header .site-heading { padding: 40px 0 30px !important; }
-  .intro-header .site-heading h1 { font-size: 26px !important; }
-  .post-card { width: 100% !important; margin-right: 0 !important; }
+  .post-container {
+    font-size: 16px !important;
+  }
+  .post-container h2 {
+    font-size: 20px !important;
+  }
+  .intro-header .post-heading {
+    padding: 60px 0 30px !important;
+  }
+  .intro-header .post-heading h1 {
+    font-size: 24px !important;
+  }
+  .intro-header .site-heading {
+    padding: 40px 0 30px !important;
+  }
+  .intro-header .site-heading h1 {
+    font-size: 26px !important;
+  }
+  .post-card {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
 }

@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic&subset=latin,latin-ext);
+
+/*
+ * Yougth Blog V2 - Magazine Card Style
+ */
+
+/* ===== Warm gray background everywhere ===== */
+body {
+  background: #f5f5f4 !important;
+}
+
+/* ===== Page layout: shrink the big hero header ===== */
+/* Applies to homepage, timeline, about, etc */
+.intro-header .site-heading,
+.intro-header .page-heading {
+  padding: 60px 0 40px !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading,
+  .intro-header .page-heading {
+    padding: 80px 0 50px !important;
+  }
+}
+.intro-header .site-heading h1,
+.intro-header .page-heading h1 {
+  font-size: 32px !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 42px !important;
+  }
+}
+.intro-header .site-heading .subheading,
+.intro-header .page-heading .subheading {
+  font-size: 15px !important;
+  color: rgba(255,255,255,0.7) !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .site-heading .subheading,
+  .intro-header .page-heading .subheading {
+    font-size: 18px !important;
+  }
+}
+
+/* ===== Article post header smaller ===== */
+.intro-header .post-heading {
+  padding: 80px 0 40px !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .post-heading {
+    padding: 100px 0 50px !important;
+  }
+}
+.intro-header .post-heading h1 {
+  font-size: 30px !important;
+  margin-bottom: 8px !important;
+}
+@media only screen and (min-width: 768px) {
+  .intro-header .post-heading h1 {
+    font-size: 38px !important;
+  }
+}
+.intro-header .post-heading .subheading {
+  font-size: 16px !important;
+  color: rgba(255,255,255,0.75) !important;
+  margin: 6px 0 0 !important;
+}
+.intro-header .post-heading .meta {
+  font-size: 13px !important;
+  color: rgba(255,255,255,0.55) !important;
+  font-style: normal !important;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* ===== Article body typography ===== */
+.post-container {
+  font-family: Georgia, "Noto Serif SC", "Source Han Serif SC", serif !important;
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+  color: #292524 !important;
+}
+.post-container p { margin-bottom: 1.5em !important; }
+.post-container h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  color: #1c1917 !important;
+  margin-top: 2em !important;
+  margin-bottom: 0.8em !important;
+  padding-left: 14px !important;
+  border-left: 3px solid #2563eb !important;
+}
+.post-container h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #292524 !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.6em !important;
+}
+.post-container strong { color: #1c1917; font-weight: 600; }
+.post-container a {
+  color: #2563eb !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(37,99,235,0.25);
+}
+.post-container a:hover { border-bottom-color: #2563eb; text-decoration: none !important; }
+.post-container ul, .post-container ol { margin-bottom: 1.5em !important; padding-left: 1.5em !important; }
+.post-container li { margin-bottom: 0.3em !important; }
+.post-container blockquote {
+  margin: 1.5em 0 !important;
+  padding: 14px 20px !important;
+  background: #f0efed !important;
+  border-left: 3px solid #d6d3d1 !important;
+  color: #57534e !important;
+  font-style: italic;
+  border-radius: 0 4px 4px 0 !important;
+}
+.post-container hr { margin: 2.5em 0 !important; border: none !important; border-top: 1px solid #e7e5e4 !important; }
+.post-container code {
+  font-family: "SF Mono", "Fira Code", monospace !important;
+  font-size: 0.85em !important;
+  background: #f0efed !important;
+  padding: 2px 6px !important;
+  border-radius: 3px !important;
+}
+@media (min-width: 1200px) {
+  .post-container { max-width: 700px; margin: 0 auto; }
+}
+
+/* ===== Nav tweaks ===== */
+.navbar-custom { min-height: 48px !important; }
+.navbar-custom .navbar-brand { padding: 12px 15px !important; font-size: 16px !important; }
+.navbar-custom .nav li a { padding: 12px 15px !important; font-size: 14px !important; }
+
+/* ===== Homepage cards (inside page layout) ===== */
+.postlist-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+.post-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.card-inner { padding: 24px; }
+.card-tags { margin-bottom: 10px; }
+.card-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  margin-right: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.card-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+  border: none !important;
+}
+.card-title a { color: #1c1917 !important; text-decoration: none !important; border-bottom: none !important; }
+.card-title a:hover { color: #2563eb !important; }
+.card-subtitle { font-size: 14px; color: #78716c; margin: 0 0 8px; line-height: 1.4; }
+.card-meta {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  color: #a8a29e;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .post-card {
+    display: inline-block;
+    width: 48%;
+    margin-right: 2%;
+    vertical-align: top;
+  }
+  .post-card:nth-child(2n) { margin-right: 0; }
+}
+
+.pagination {
+  text-align: center;
+  padding: 30px 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  clear: both;
+}
+.pagination a { color: #2563eb; text-decoration: none; padding: 4px 12px; }
+.pagination a:hover { text-decoration: underline; }
+.page-num { color: #a8a29e; margin: 0 12px; }
+
+/* ===== Comment ===== */
+.comment { margin-top: 30px; }
+
+/* ===== Sidebar tags as color blocks ===== */
+.sidebar-container .tags a {
+  border: none !important;
+  padding: 2px 8px !important;
+  border-radius: 3px !important;
+  font-size: 12px !important;
+  color: #fff !important;
+  background: #78716c !important;
+}
+.sidebar-container .tags a:hover { background: #57534e !important; color: #fff !important; }
+
+/* ===== Catalog: hide sub-headings ===== */
+.side-catalog .catalog-body .h3_nav,
+.side-catalog .catalog-body .h4_nav,
+.side-catalog .catalog-body .h5_nav,
+.side-catalog .catalog-body .h6_nav {
+  display: none !important;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .post-container { font-size: 16px !important; }
+  .post-container h2 { font-size: 20px !important; }
+  .intro-header .post-heading { padding: 60px 0 30px !important; }
+  .intro-header .post-heading h1 { font-size: 24px !important; }
+  .intro-header .site-heading { padding: 40px 0 30px !important; }
+  .intro-header .site-heading h1 { font-size: 26px !important; }
+  .post-card { width: 100% !important; margin-right: 0 !important; }
+}

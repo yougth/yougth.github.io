@@ -34,6 +34,7 @@ jianshu_username:   e71990ada2fd
 highlighter: rouge
 permalink: pretty
 paginate: 10
+paginate_path: "/page:num/"
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 anchorjs: true                                  # if you want to customize anchor. check out line:181 of `post.html`
 
@@ -65,8 +66,7 @@ kramdown:
 ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
-ga_track_id: 'UA-109186755-1'             # Format: UA-xxxxxx-xx
-ga_domain: yougth.top
+ga_track_id: 'G-529BZWQXPV'             # Format: G-XXXXXXXXXX (GA4)
 
 
 
