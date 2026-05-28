@@ -1388,7 +1388,7 @@ body {
 .home-hero {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 56px 24px 36px;
+  padding: 96px 24px 36px;
   text-align: left;
 }
 .home-hero h1 {
@@ -1421,7 +1421,7 @@ body {
 }
 @media (max-width: 768px) {
   .home-hero {
-    padding: 40px 18px 24px;
+    padding: 72px 18px 24px;
   }
   .home-hero h1 {
     font-size: 26px;
