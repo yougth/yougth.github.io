@@ -106,9 +106,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<script src="{{ "/js/hux-blog.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/hux-blog.min.js" | prepend: site.baseurl }}"></script>
 
-{% if site.service-worker %}
+{% unless site.service-worker %}
 <script type="text/javascript">
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.getRegistrations().then(function(registrations) {
@@ -119,7 +119,7 @@
         });
     }
 </script>
-{% endif %}
+{% endunless %}
 
 
 <script>

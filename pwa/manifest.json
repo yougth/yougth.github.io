@@ -1,7 +1,7 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
-  "description": "About an engineer & designer who loves web.",
+  "name": "Yougth Blog",
+  "short_name": "Yougth Blog",
+  "description": "推荐系统、机器学习、投资与个人思考。",
   "icons": [{
     "src": "icons/128.png",
     "sizes": "128x128",

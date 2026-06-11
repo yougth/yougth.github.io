@@ -1,10 +1,10 @@
 # Site settings
 title: Yougth Blog
-SEOTitle: yougth的博客 | BY Blog
+SEOTitle: yougth的博客 | Yougth Blog
 header-img: img/post-bg-desk.jpg
 email: yangchuangl@163.com
 description: "大神养成中..."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
+keyword: "yougth, yougth博客, 推荐系统, 机器学习, 算法工程师, 深度学习, Recommender System"
 url: "https://yougth.github.io"           # 修正了你的博客地址，使用 https
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/yougth/yougth.github.io.git" # 修正了你的代码仓库地址
@@ -109,13 +109,13 @@ tag_colors:
 friends: [
     {
         title: "csdn博客",
-        href: "http://blog.csdn.net/y990041769?viewmode=list"
+        href: "https://blog.csdn.net/y990041769?viewmode=list"
     },{
         title: "知乎·yougth",
         href: "https://www.zhihu.com/people/yougth/activities"
     },{
         title: "阮一峰",
-        href: "http://www.ruanyifeng.com/blog/"
+        href: "https://www.ruanyifeng.com/blog/"
     },{
         title: "CoolShell",
         href: "https://coolshell.cn/"
@@ -124,13 +124,13 @@ friends: [
         href: "https://tech.meituan.com/"
     },{
         title: "Semocean",
-        href: "http://www.semocean.com/"
+        href: "https://www.semocean.com/"
     },{
         title: "统计之都",
         href: "https://cosx.org/"
     },{
         title: "期望最大化",
-        href: "http://column.hongliangjie.com/"
+        href: "https://column.hongliangjie.com/"
     },{
         title: "小毛驴",
         href: "https://yangxudong.github.io/"
