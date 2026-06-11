@@ -16,3 +16,6 @@
 
 - text_zh: "最近还迷上了机车，不知道是不是好的开始。"
   text_en: "Recently I got into motorcycles."
+
+- text_zh: "闲暇时间也在做投资，自己搭了一个[投资组合管理工具](https://portfolio-tracker-gules-mu.vercel.app)用来记录持仓和盈亏，数据存在本地浏览器。"
+  text_en: "I also invest in my spare time and built a [portfolio tracker](https://portfolio-tracker-gules-mu.vercel.app) to track positions and P&L. Data is stored locally in the browser."
