@@ -1249,6 +1249,8 @@ body {
 .post-container p {
   margin-bottom: 1.75em !important;
   text-align: justify;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .post-container h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
@@ -1312,7 +1314,7 @@ body {
 }
 @media (min-width: 1200px) {
   .post-container {
-    max-width: 700px;
+    max-width: 100%;
     margin: 0 auto;
   }
 }
@@ -1606,6 +1608,8 @@ body {
 }
 .content {
   padding: 24px 0 48px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .content p {
   margin-bottom: 1.75em;
@@ -1773,6 +1777,8 @@ body {
   margin-right: auto;
   background: transparent;
   border-radius: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .tl-header {
   padding: 48px 24px 24px;
@@ -2025,6 +2031,8 @@ body {
   padding: 40px 0 60px;
   background: transparent;
   border-radius: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 .page-content-wrap h2 {
   font-family: "Noto Serif SC", Georgia, "Source Han Serif SC", "Songti SC", "STSong", "SimSun", serif !important;
