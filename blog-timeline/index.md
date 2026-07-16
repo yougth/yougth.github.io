@@ -88,9 +88,9 @@ description: "The sandglass remembers the time we lost."
 群体（小团队，公司、公司）也是需要不断对抗墒增。
 墒增的两个条件：封闭系统+无外力做工。对抗墒增需要开放系统+引入外力。
 
-<img src="http://990040.xyz/img/timeline/entropy_persion.jpeg" height="400" width="500">
+<img src="/img/timeline/entropy_persion.jpeg" height="400" width="500">
 
-<img src="http://990040.xyz/img/timeline/entropy_group.png" height="100" width="300">
+<img src="/img/timeline/entropy_group.png" height="100" width="300">
 
 ***
 ### 2024-02-19
