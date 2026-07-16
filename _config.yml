@@ -5,7 +5,7 @@ header-img: img/post-bg-desk.jpg
 email: yangchuangl@163.com
 description: "大神养成中..."
 keyword: "yougth, yougth博客, 推荐系统, 机器学习, 算法工程师, 深度学习, Recommender System"
-url: "https://yougth.github.io"           # 修正了你的博客地址，使用 https
+url: "https://www.990040.xyz"           # 修正了你的博客地址，使用 https
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/yougth/yougth.github.io.git" # 修正了你的代码仓库地址
 
