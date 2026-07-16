@@ -419,7 +419,15 @@ body {
   #huxblog_navbar .navbar-collapse { height: auto !important; transform: none !important; -webkit-transform: none !important; }
   #huxblog_navbar li { opacity: 1 !important; }
   .navbar-toggle .icon-bar { background-color: #44403c !important; }
-  .navbar-collapse { border-top: 1px solid rgba(0,0,0,0.05); padding: 8px 0; }
+  .navbar-default.navbar-custom .navbar-collapse,
+  .navbar-custom .navbar-collapse {
+    background: rgba(247,243,224,0.98) !important;
+    border-top: 1px solid rgba(0,0,0,0.05) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
+    padding: 8px 0 !important;
+    margin-top: 4px;
+  }
   .navbar-custom .nav li a { padding: 10px 20px !important; }
 }
 
